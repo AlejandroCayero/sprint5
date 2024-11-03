@@ -1,0 +1,58 @@
+public class Main {
+    public static void ejerciciocurso(int x) {
+        int curs = 0;
+        int cicle = 0;
+
+        if (x < 3) {
+            System.out.println("Es massa petit");
+        } else if (x < 6) {
+            respuestaciclo(curs,cicle);
+        }else if (x<7) {
+            curs=1;
+            cicle=1;
+           respuestaciclo(curs,cicle);
+        }else if (x<8) {
+            curs=2;
+            cicle=1;
+            respuestaciclo(curs,cicle);
+        }else if (x<9) {
+            curs=3;
+            cicle=2;
+            respuestaciclo(curs,cicle);
+        }else if (x<10) {
+            curs=4;
+            cicle=2;
+            respuestaciclo(curs,cicle);
+        }else if (x<11) {
+            curs=5;
+            cicle=3;
+            respuestaciclo(curs,cicle);
+        }else if (x<12) {
+            curs=6;
+            cicle=3;
+            respuestaciclo(curs,cicle);
+        }else{
+            System.out.println("Es massa gran");
+        }
+
+    }
+    public static void respuestaciclo(int curso,int ciclo){
+        switch (ciclo){
+            case 0:
+                System.out.println("Es d'educació infantil");
+                break;
+            case 1:
+                System.out.println("Es d'educació primaria Cicle inicial curso:" +curso);
+                break;
+            case 2:
+                System.out.println("Es d'educació primaria Cicle mitja curso:" +curso);
+                break;
+            case 3:
+                System.out.println("Es d'educació primaria Cicle superior curso:" +curso);
+                break;
+        }
+    }
+    public static void main(String[] args) {
+        ejerciciocurso(12);
+    }
+}
