@@ -1,0 +1,45 @@
+public class Main {
+    
+    public static void evaluar(int nota, int trabajos,int totaltrabajos,int notapractica){
+        double porcentajetrabajos=((double)trabajos/totaltrabajos)*100 ;
+        int notalluiraments = 0;
+        double notafinal=0;
+        boolean noSeguidaAC= false;
+
+
+        if(nota<7){
+            System.out.println("Esta suspes per prova final");
+        } else if (porcentajetrabajos<70) {
+            noSeguidaAC=true;
+            System.out.println("No has seguit avaluacion continua, esta suspes");
+        } else if (porcentajetrabajos==100) {
+            notalluiraments=10;
+            System.out.println("La nota de lliuraments es = "+notalluiraments );
+        }else if (porcentajetrabajos>=90) {
+            notalluiraments=8;
+            System.out.println("La nota de lliuraments es = "+notalluiraments );
+        }else if (porcentajetrabajos>=80) {
+            notalluiraments=6;
+            System.out.println("La nota de lliuraments es = "+notalluiraments );
+        }else if (porcentajetrabajos>=70) {
+            notalluiraments=4;
+            System.out.println("La nota de lliuraments es = "+notalluiraments );
+        }
+        notafinal=(nota*0.2+notalluiraments*0.1+notapractica*0.7);
+        if(notafinal<5){
+            if(noSeguidaAC){
+                System.out.println("Cal seguir avaluació continua");
+            }else{
+                System.out.println("Fes els exercicis preparatoris per a la PAF2");
+            }
+        }
+    }
+    public static void main(String[] args) {
+     int nota= 7;
+     int entregas =7;
+     int totalentregas =10;
+     int notapractica = 10;
+     evaluar(nota,entregas,totalentregas,notapractica);
+
+    }
+}
